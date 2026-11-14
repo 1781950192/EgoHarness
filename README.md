@@ -1,20 +1,20 @@
 <div align="center">
 
-# EgoDirector
+# EgoHarness
 
-### Self-Evolving Semantic Context Adaptation for Scalable Open-World Egocentric Activity Recognition
+### A Stateful Visual-Semantic Inference Harness for Open-World Egocentric Activity Recognition
 
-*Under review at Pattern Recognition (PR)*
+*Under review at CVPR 2027 (double-blind)*
 
 Baolong Liu, Guolong Xu, Zihao Wang, Tingting Guo, Yan Tian, Jianfeng Dong, Xi-Ao Ma, Chuanhuang Li
 
-![Venue](https://img.shields.io/badge/Under%20Review-Pattern%20Recognition-ff8000)
+![Venue](https://img.shields.io/badge/Under%20Review-CVPR%202027-ff8000)
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C)
 ![vLLM](https://img.shields.io/badge/Serving-vLLM-6E56CF)
 ![Tuning--free](https://img.shields.io/badge/Training-Tuning--free-2E7D32)
 
-[🌐 Project Page](https://1781950192.github.io/EgoDirector/) · [📄 Paper](#-citation) · [🖥️ Code](https://github.com/1781950192/EgoDirector)
+[🌐 Project Page](https://1781950192.github.io/EgoHarness/) · [📄 Paper](#-citation) · [🖥️ Code](https://github.com/1781950192/EgoDirector)
 
 </div>
 
@@ -23,15 +23,15 @@ Baolong Liu, Guolong Xu, Zihao Wang, Tingting Guo, Yan Tian, Jianfeng Dong, Xi-A
 </p>
 
 <p align="center">
-  <em>EgoDirector is a tuning-free agentic framework that decomposes open-world egocentric activity recognition into
-  coordinated perception, reasoning and prediction, powered by a <b>Visual Context Engine (VCE)</b> and a
+  <em>EgoHarness is a stateful visual–semantic inference harness built around a single frozen VLM, decomposing open-world
+  egocentric activity recognition into perception, knowledge-conditioned reasoning and prediction, powered by a <b>Visual Context Engine (VCE)</b> and a
   <b>Self-Evolving Semantic Context Engine (SCE)</b>.</em>
 </p>
 
 ---
 
 > 📌 **Status:** This repository is the reference implementation of a manuscript **currently under review** at
-> *Pattern Recognition*. The paper is not yet published; results reported
+> *CVPR 2027*. The paper is not yet published; results reported
 > below correspond to the submitted version and may change after revision.
 
 ## 🔥 News
@@ -48,9 +48,10 @@ hand-object occlusion) and the **combinatorial explosion** of unseen action–ob
 static neuro-symbolic knowledge bases both suffer from *knowledge stagnation*: once deployed, their knowledge cannot
 adapt to novel concepts.
 
-**EgoDirector** reformulates action recognition as collaborative reasoning among specialized agents and keeps adapting
+**EgoHarness** reformulates action recognition as staged, role-conditioned reasoning over a single frozen VLM and keeps adapting
 at inference time — **without any training or fine-tuning on the target domain** (strictly tuning-free).
 
+The four stages run in a fixed order — **OPA → SCE → ARA → APA** — each issuing role-conditioned calls to the same VLM.
 The whole recognition process is a progressive knowledge-guided decomposition:
 
 $$
@@ -124,7 +125,7 @@ action–object matching).
 
 ### Comparison with state of the art
 
-> EgoDirector is evaluated under the **strict L3** fully open-world setting, while all baselines are reported under
+> EgoHarness is evaluated under the **strict L3** fully open-world setting, while all baselines are reported under
 > the **easier L1** setting. Numbers are verbal/noun/action accuracy (%) and WUPS / strict phrase accuracy.
 
 <table>
@@ -137,10 +138,10 @@ action–object matching).
 <tr><td>ALGO + LaViLa</td><td>ECCV 2024</td><td>17.50</td><td>26.60</td><td>22.05</td><td>49.42</td><td>3.50</td><td>30.74</td><td>27.00</td><td>28.87</td><td>53.38</td><td>8.30</td><td>22.84</td><td>12.54</td><td>17.69</td><td>34.47</td><td>4.39</td></tr>
 <tr><td>EgoVLP + ProbRes</td><td>ICCV 2025</td><td>–</td><td>–</td><td>19.12</td><td>49.25</td><td>1.97</td><td>–</td><td>–</td><td>29.84</td><td>53.98</td><td>6.32</td><td>–</td><td>–</td><td>13.45</td><td>40.53</td><td>2.36</td></tr>
 <tr><td>LaViLa + ProbRes</td><td>ICCV 2025</td><td>–</td><td>–</td><td>33.80</td><td>53.34</td><td>8.98</td><td>–</td><td>–</td><td>31.70</td><td>53.82</td><td>9.33</td><td>–</td><td>–</td><td>18.89</td><td>43.55</td><td>4.61</td></tr>
-<tr><td><b>EgoDirector (Ours)</b></td><td>–</td><td><b>27.27</b></td><td><b>55.11</b></td><td><b>41.19</b></td><td><b>64.94</b></td><td><b>14.96</b></td><td><b>33.32</b></td><td><b>49.79</b></td><td><b>41.56</b></td><td><b>58.93</b></td><td><b>23.45</b></td><td><b>30.12</b></td><td><b>38.75</b></td><td><b>34.44</b></td><td><b>55.61</b></td><td><b>16.40</b></td></tr>
+<tr><td><b>EgoHarness (Ours)</b></td><td>–</td><td><b>27.27</b></td><td><b>55.11</b></td><td><b>41.19</b></td><td><b>64.94</b></td><td><b>14.96</b></td><td><b>33.32</b></td><td><b>49.79</b></td><td><b>41.56</b></td><td><b>58.93</b></td><td><b>23.45</b></td><td><b>30.12</b></td><td><b>38.75</b></td><td><b>34.44</b></td><td><b>55.61</b></td><td><b>16.40</b></td></tr>
 </table>
 
-With a single lightweight **8B open-source VLM**, EgoDirector achieves an average **139% relative improvement** over
+With a single lightweight **8B open-source VLM**, EgoHarness achieves an average **139% relative improvement** over
 prior methods under the L3 setting (e.g. strict phrase accuracy on GTEA Gaze+: **23.45** vs. 9.33).
 
 ### Ablation on the key components
@@ -179,7 +180,7 @@ prior methods under the L3 setting (e.g. strict phrase accuracy on GTEA Gaze+: *
 ## 📁 Repository Structure
 
 ```
-EgoDirector/
+EgoHarness/
 ├── main_gtea.py              # Entry point: GTEA Gaze
 ├── main_egtea.py             # Entry point: GTEA Gaze+
 ├── main_ek100.py             # Entry point: EPIC-KITCHENS-100
@@ -206,8 +207,8 @@ EgoDirector/
 ## 🔧 Installation
 
 ```bash
-conda create -n egodirector python=3.11 -y
-conda activate egodirector
+conda create -n egoharness python=3.11 -y
+conda activate egoharness
 
 # inference engine + data utilities
 pip install vllm
@@ -226,6 +227,9 @@ one local VLM instance, so a single model server is enough.
 | **GTEA Gaze** | 14 subjects, 17 videos, 10 verbs, 38 nouns | [EGTEA Gaze+ Downloader](https://github.com/amitsou/EGTEA_Gaze_Plus_Downloader) |
 | **GTEA Gaze+** | 10 subjects, 37 videos, 15 verbs, 27 nouns | [EGTEA Gaze+ Downloader](https://github.com/amitsou/EGTEA_Gaze_Plus_Downloader) |
 | **EPIC-KITCHENS-100** | 45 subjects, 700 videos (~100 hours) | [Epic-Kitchens 2020-100](https://epic-kitchens.github.io/2020-100) |
+
+> Evaluation covers **528** annotated clips from GTEA Gaze, **6,065** from the GTEA Gaze+ test split and **9,669**
+> from EPIC-KITCHENS-100 — **16,262 clips in total**.
 
 Then set the corresponding paths in the entry scripts:
 
@@ -366,10 +370,10 @@ bash start_web.sh        # background daemon
 The manuscript is currently **under review**; please cite it as an unpublished manuscript for now:
 
 ```bibtex
-@unpublished{liu2026egodirector,
-  title  = {EgoDirector: Self-Evolving Semantic Context Adaptation for Scalable Open-World Egocentric Activity Recognition},
+@unpublished{liu2026egoharness,
+  title  = {EgoHarness: A Stateful Visual-Semantic Inference Harness for Open-World Egocentric Activity Recognition},
   author = {Liu, Baolong and Xu, Guolong and Wang, Zihao and Guo, Tingting and Tian, Yan and Dong, Jianfeng and Ma, Xi-Ao and Li, Chuanhuang},
-  note   = {under review at Pattern Recognition},
+  note   = {under review at CVPR 2027 (double-blind)},
   year   = {2026}
 }
 ```
@@ -377,12 +381,12 @@ The manuscript is currently **under review**; please cite it as an unpublished m
 Once the paper is published, the entry below will replace the one above:
 
 ```bibtex
-@article{liu2026egodirector,
-  title   = {EgoDirector: Self-Evolving Semantic Context Adaptation for Scalable Open-World Egocentric Activity Recognition},
-  author  = {Liu, Baolong and Xu, Guolong and Wang, Zihao and Guo, Tingting and Tian, Yan and Dong, Jianfeng and Ma, Xi-Ao and Li, Chuanhuang},
-  journal = {Pattern Recognition},
-  year    = {2026}
-  % volume, number, pages and DOI will be added upon publication
+@inproceedings{liu2027egoharness,
+  title     = {EgoHarness: A Stateful Visual-Semantic Inference Harness for Open-World Egocentric Activity Recognition},
+  author    = {Liu, Baolong and Xu, Guolong and Wang, Zihao and Guo, Tingting and Tian, Yan and Dong, Jianfeng and Ma, Xi-Ao and Li, Chuanhuang},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2027}
+  % add pages upon publication
 }
 ```
 

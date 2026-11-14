@@ -74,7 +74,7 @@ python efficiency/ek100/main_ek100_efficiency.py \
 curl http://localhost:8000/v1/models
 
 # Check the dataset
-ls /mnt/data/xgl/mydata/ek100/
+ls /mnt/data/anonymous/mydata/ek100/
 ```
 
 ## 🎯 Key metrics

@@ -6,7 +6,7 @@
 
 *Under review at CVPR 2027 (double-blind)*
 
-Baolong Liu, Guolong Xu, Zihao Wang, Tingting Guo, Yan Tian, Jianfeng Dong, Xi-Ao Ma, Chuanhuang Li
+Anonymous authors — double-blind submission
 
 ![Venue](https://img.shields.io/badge/Under%20Review-CVPR%202027-ff8000)
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB)
@@ -14,7 +14,6 @@ Baolong Liu, Guolong Xu, Zihao Wang, Tingting Guo, Yan Tian, Jianfeng Dong, Xi-A
 ![vLLM](https://img.shields.io/badge/Serving-vLLM-6E56CF)
 ![Tuning--free](https://img.shields.io/badge/Training-Tuning--free-2E7D32)
 
-[🌐 Project Page](https://1781950192.github.io/EgoHarness/) · [📄 Paper](#-citation) · [🖥️ Code](https://github.com/1781950192/EgoDirector)
 
 </div>
 
@@ -30,6 +29,8 @@ Baolong Liu, Guolong Xu, Zihao Wang, Tingting Guo, Yan Tian, Jianfeng Dong, Xi-A
 
 ---
 
+> 🔒 This copy is **anonymized for double-blind review**: author information, repository links and the BibTeX entry are withheld.
+>
 > 📌 **Status:** This repository is the reference implementation of a manuscript **currently under review** at
 > *CVPR 2027*. The paper is not yet published; results reported
 > below correspond to the submitted version and may change after revision.
@@ -265,7 +266,7 @@ profiles are already provided in `context_base/`, so **no API key is required** 
 The prompt masks $P_t$ of the Visual Context Engine come from **VISOR-HOS**:
 
 - Code: [epic-kitchens/VISOR-HOS](https://github.com/epic-kitchens/VISOR-HOS)
-- Pre-inferred masks (Baidu Pan): <https://pan.baidu.com/s/1uI6FEtYy6WwyK64K-HiJ3g?pwd=k2qi> (access code: `k2qi`)
+- Pre-inferred masks: provided as review supplementary material; the public download link will be released upon acceptance.
 
 Place the extracted masks under `--hos_path` (e.g. `<dataset>_hos/32frames/`). Pre-inferred masks let you skip HOS
 inference entirely.
@@ -367,28 +368,8 @@ bash start_web.sh        # background daemon
 
 ## 📜 Citation
 
-The manuscript is currently **under review**; please cite it as an unpublished manuscript for now:
+The BibTeX entry will be released upon acceptance (withheld for double-blind review).
 
-```bibtex
-@unpublished{liu2026egoharness,
-  title  = {EgoHarness: A Stateful Visual-Semantic Inference Harness for Open-World Egocentric Activity Recognition},
-  author = {Liu, Baolong and Xu, Guolong and Wang, Zihao and Guo, Tingting and Tian, Yan and Dong, Jianfeng and Ma, Xi-Ao and Li, Chuanhuang},
-  note   = {under review at CVPR 2027 (double-blind)},
-  year   = {2026}
-}
-```
-
-Once the paper is published, the entry below will replace the one above:
-
-```bibtex
-@inproceedings{liu2027egoharness,
-  title     = {EgoHarness: A Stateful Visual-Semantic Inference Harness for Open-World Egocentric Activity Recognition},
-  author    = {Liu, Baolong and Xu, Guolong and Wang, Zihao and Guo, Tingting and Tian, Yan and Dong, Jianfeng and Ma, Xi-Ao and Li, Chuanhuang},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year      = {2027}
-  % add pages upon publication
-}
-```
 
 ---
 

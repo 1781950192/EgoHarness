@@ -223,9 +223,9 @@ The scripts of all three datasets support the following parameters:
    ```
 
 2. **The dataset paths are configured correctly**
-   - EK100: `/mnt/data/xgl/mydata/ek100/`
-   - EGTEA: `/mnt/data/xgl/mydata/EGTEA++/EGTEA/`
-   - GTEA: `/mnt/data/xgl/mydata/EGTEA++/EGTEA/`
+   - EK100: `/mnt/data/anonymous/mydata/ek100/`
+   - EGTEA: `/mnt/data/anonymous/mydata/EGTEA++/EGTEA/`
+   - GTEA: `/mnt/data/anonymous/mydata/EGTEA++/EGTEA/`
 
 3. **The configuration files exist**
    - `context/verb_noun.json`

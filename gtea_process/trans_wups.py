@@ -5,7 +5,7 @@ from collections import defaultdict
 import nltk
 from nltk.corpus import wordnet as wn
 
-nltk.data.path.append('/mnt/data/xgl/mydata/nltk_data')
+nltk.data.path.append('/mnt/data/anonymous/mydata/nltk_data')
 
 def parse_gtea_labels_for_evaluation(labels_dir):
     """Parse a GTEA label file for evaluation."""
@@ -174,8 +174,8 @@ def evaluate_wups_for_multiple_top_k(result_file, ground_truth, top_k_list=[1, 5
 
 def main():
     # Configure the paths
-    labels_dir = '/mnt/data/xgl/mydata/EGTEA++/EGTEA/GTEA_Labels_71/labels'
-    result_file = '/mnt/data/xgl/mycode/action_agent_vllm/gtea_val_results_32.txt'
+    labels_dir = '/mnt/data/anonymous/mydata/EGTEA++/EGTEA/GTEA_Labels_71/labels'
+    result_file = '/mnt/data/anonymous/mycode/action_agent_vllm/gtea_val_results_32.txt'
     
     # Parse the ground-truth labels
     ground_truth = parse_gtea_labels_for_evaluation(labels_dir)

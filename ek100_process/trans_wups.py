@@ -5,7 +5,7 @@ import nltk
 from nltk.corpus import wordnet as wn
 
 # If running on a server, the nltk_data path has to be specified
-# nltk.data.path.append('/mnt/data/xgl/mydata/nltk_data')
+# nltk.data.path.append('/mnt/data/anonymous/mydata/nltk_data')
 
 # ====================== WUPS base functions ======================
 
@@ -153,10 +153,10 @@ def evaluate_wups_for_multiple_top_k(
 # ====================== Main function ======================
 
 def main():
-    verb_csv    = "/mnt/data/xgl/mydata/ek100/EPIC_100_verb_classes.csv"
-    noun_csv    = "/mnt/data/xgl/mydata/ek100/EPIC_100_noun_classes.csv"
-    gt_csv      = "/mnt/data/xgl/mydata/ek100/EPIC_100_validation.csv"
-    result_file = "/mnt/data/xgl/mycode/action_agent_vllm/ek100_val_8B_32frames.txt"  # Your prediction file
+    verb_csv    = "/mnt/data/anonymous/mydata/ek100/EPIC_100_verb_classes.csv"
+    noun_csv    = "/mnt/data/anonymous/mydata/ek100/EPIC_100_noun_classes.csv"
+    gt_csv      = "/mnt/data/anonymous/mydata/ek100/EPIC_100_validation.csv"
+    result_file = "/mnt/data/anonymous/mycode/action_agent_vllm/ek100_val_8B_32frames.txt"  # Your prediction file
     
     print("Loading id -> word mappings...")
     id_to_verb, id_to_noun = load_id_to_word(verb_csv, noun_csv)

@@ -23,7 +23,7 @@ except Exception as e:
     print(f"  Error: {e}")
     print("")
     print("Please start the vLLM service first:")
-    print("  vllm serve /mnt/data/xgl/modules/qwen_vl_8b \\")
+    print("  vllm serve /mnt/data/anonymous/modules/qwen_vl_8b \\")
     print("    --dtype bfloat16 --max-model-len 32768 \\")
     print("    --gpu-memory-utilization 0.4 \\")
     print("    --tensor-parallel-size 1 --host 0.0.0.0 --port 8000 \\")

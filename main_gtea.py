@@ -88,13 +88,13 @@ def process_all_sequentially_gtea(
 def main():
     parser = argparse.ArgumentParser(description="GTEA action recognition - single-threaded sequential processing")
     parser.add_argument('--labels_dir', type=str,
-                        default='/mnt/data/xgl/mydata/EGTEA++/EGTEA/GTEA_Labels_71/labels',
+                        default='/mnt/data/anonymous/mydata/EGTEA++/EGTEA/GTEA_Labels_71/labels',
                         help='Path of the GTEA label directory')
     parser.add_argument('--videos_base_path', type=str,
-                        default='/mnt/data/xgl/mydata/EGTEA++/EGTEA/Videos',
+                        default='/mnt/data/anonymous/mydata/EGTEA++/EGTEA/Videos',
                         help='Directory containing the GTEA video files')
     parser.add_argument('--hos_path', type=str,
-                        default='/mnt/data/xgl/mydata/EGTEA++/gtea_hos/32frames',
+                        default='/mnt/data/anonymous/mydata/EGTEA++/gtea_hos/32frames',
                         help='Directory containing the hand-object segmentation results')
     parser.add_argument('--output_txt_path', type=str, default=None,
                         help='Path of the output file; if not given, it is generated from num_frames')

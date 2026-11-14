@@ -4,7 +4,7 @@ import nltk
 from nltk.corpus import wordnet as wn
 
 # Make sure wordnet has been downloaded (if not, download it manually to the path below)
-nltk.data.path.append('/mnt/data/xgl/mydata/nltk_data')  # Change this according to your path
+nltk.data.path.append('/mnt/data/anonymous/mydata/nltk_data')  # Change this according to your path
 
 
 # ==================== Verb mapping (aliases supported, same as before) ====================
@@ -252,9 +252,9 @@ def evaluate_wups_egtea(result_file, label_file, noun_map_file, top_k_list=[1, 5
 # ==================== Main function ====================
 def main():
     # Please change this according to your actual path
-    result_file = '/mnt/data/xgl/mycode/action_agent_vllm/egtea_results_cpm.txt'
-    label_file = '/mnt/data/xgl/mydata/EGTEA++/EGTEA/Action_Annotations/test_split1.txt'
-    noun_map_file = '/mnt/data/xgl/mydata/EGTEA++/EGTEA/Action_Annotations/noun_idx.txt'
+    result_file = '/mnt/data/anonymous/mycode/action_agent_vllm/egtea_results_cpm.txt'
+    label_file = '/mnt/data/anonymous/mydata/EGTEA++/EGTEA/Action_Annotations/test_split1.txt'
+    noun_map_file = '/mnt/data/anonymous/mydata/EGTEA++/EGTEA/Action_Annotations/noun_idx.txt'
 
     print("=== EGTEA WUPS Evaluation ===")
     results = evaluate_wups_egtea(

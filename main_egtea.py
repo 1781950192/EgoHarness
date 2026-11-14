@@ -86,11 +86,11 @@ def process_all_sequentially_egtea(
 def main():
     parser = argparse.ArgumentParser(description="EGTEA+ action recognition")
     parser.add_argument('--label_file', type=str,
-                        default='/mnt/data/xgl/mydata/EGTEA++/EGTEA/Action_Annotations/test_split1.txt')
+                        default='/mnt/data/anonymous/mydata/EGTEA++/EGTEA/Action_Annotations/test_split1.txt')
     parser.add_argument('--video_base_dir', type=str,
-                        default='/mnt/data/xgl/mydata/EGTEA++/EGTEA/Trimmed_Action_Clips/trimmed_actions/cropped_clips')
+                        default='/mnt/data/anonymous/mydata/EGTEA++/EGTEA/Trimmed_Action_Clips/trimmed_actions/cropped_clips')
     parser.add_argument('--hos_path', type=str,
-                        default='/mnt/data/xgl/mydata/EGTEA++/egtea_hos/32frames')
+                        default='/mnt/data/anonymous/mydata/EGTEA++/egtea_hos/32frames')
     parser.add_argument('--output_txt_path', type=str, default=None,
                         help='Path of the output file; if not given, it is generated from num_frames')
     parser.add_argument('--base', type=int, default=0, choices=[0, 1, 2],

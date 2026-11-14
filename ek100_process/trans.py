@@ -3,10 +3,10 @@ import ast
 from collections import defaultdict
 
 # ====================== Change these four lines ======================
-VERB_CSV   = "/mnt/data/xgl/mydata/ek100/EPIC_100_verb_classes.csv"
-NOUN_CSV   = "/mnt/data/xgl/mydata/ek100/EPIC_100_noun_classes.csv"
-INPUT_TXT  = "/mnt/data/xgl/mycode/action_agent_vllm/ek100_val_8B_32frames.txt"
-VAL_CSV    = "/mnt/data/xgl/mydata/ek100/EPIC_100_validation.csv"
+VERB_CSV   = "/mnt/data/anonymous/mydata/ek100/EPIC_100_verb_classes.csv"
+NOUN_CSV   = "/mnt/data/anonymous/mydata/ek100/EPIC_100_noun_classes.csv"
+INPUT_TXT  = "/mnt/data/anonymous/mycode/action_agent_vllm/ek100_val_8B_32frames.txt"
+VAL_CSV    = "/mnt/data/anonymous/mydata/ek100/EPIC_100_validation.csv"
 # =====================================================
 
 # Step 1: Load the official GT

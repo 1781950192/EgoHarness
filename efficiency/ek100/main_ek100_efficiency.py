@@ -92,8 +92,8 @@ def process_all_sequentially_efficiency(
             print(f"\nProgress: {idx+1}/{len(data_list)} | Elapsed: {elapsed:.1f}s | Current video: {narration_id}")
 
         # Prepare the data
-        base_path = os.path.join('/mnt/data/xgl/mydata/ek100', data['participant_id'], 'rgb_frames', data['video_id'])
-        base_path_hos = os.path.join('/mnt/data/xgl/mydata/ek100_hos/average', data['participant_id'], 'rgb_frames', data['video_id'])
+        base_path = os.path.join('/mnt/data/anonymous/mydata/ek100', data['participant_id'], 'rgb_frames', data['video_id'])
+        base_path_hos = os.path.join('/mnt/data/anonymous/mydata/ek100_hos/average', data['participant_id'], 'rgb_frames', data['video_id'])
 
         if not os.path.exists(base_path):
             print(f"Path does not exist: {base_path}, skipping")
@@ -244,7 +244,7 @@ def main():
     parser.add_argument('--top_k', type=int, default=3, help="Number of top strategies taken from the playbook for each level")
     args = parser.parse_args()
 
-    csv_file_path = '/mnt/data/xgl/mydata/ek100/EPIC_100_validation.csv'
+    csv_file_path = '/mnt/data/anonymous/mydata/ek100/EPIC_100_validation.csv'
     output_txt_path = 'efficiency/ek100/ek100_efficiency_results.txt'
     timing_csv_path = 'efficiency/ek100/ek100_efficiency_timing.csv'
     playbook_path = 'efficiency/ek100/ek100_playbook_8B.json'

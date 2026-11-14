@@ -24,7 +24,7 @@ This experiment verifies whether the action recognition system meets the **real-
 
 ```bash
 # Enter the experiment directory
-cd /mnt/data/xgl/mycode/action_agent_vllm/efficiency/ek100_realtime
+cd /mnt/data/anonymous/mycode/action_agent_vllm/efficiency/ek100_realtime
 
 # Run the experiment (100 videos by default)
 bash run.sh

@@ -35,13 +35,13 @@ class Config:
     DATASET = 'ek100'  # Change this to switch datasets
     
     # EK100 configuration
-    EK100_CSV_FILE_PATH = '/mnt/data/xgl/mydata/ek100/EPIC_100_validation.csv'
-    EK100_BASE_PATH_ROOT = '/mnt/data/xgl/mydata/ek100'
-    EK100_HOS_PATH_ROOT = '/mnt/data/xgl/mydata/ek100_hos/average'
+    EK100_CSV_FILE_PATH = '/mnt/data/anonymous/mydata/ek100/EPIC_100_validation.csv'
+    EK100_BASE_PATH_ROOT = '/mnt/data/anonymous/mydata/ek100'
+    EK100_HOS_PATH_ROOT = '/mnt/data/anonymous/mydata/ek100_hos/average'
     
     # GTEA configuration
-    GTEA_LABELS_DIR = '/mnt/data/xgl/mydata/EGTEA++/EGTEA/GTEA_Labels_71/labels'
-    GTEA_VIDEOS_PATH = '/mnt/data/xgl/mydata/EGTEA++/EGTEA/Videos'
+    GTEA_LABELS_DIR = '/mnt/data/anonymous/mydata/EGTEA++/EGTEA/GTEA_Labels_71/labels'
+    GTEA_VIDEOS_PATH = '/mnt/data/anonymous/mydata/EGTEA++/EGTEA/Videos'
     
     # Output configuration
     OUTPUT_TXT_PATH = 'ek100_val_8B_web_results.txt'

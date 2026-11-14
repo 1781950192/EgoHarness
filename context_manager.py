@@ -67,8 +67,8 @@ def update_verb_noun_json(filename: str, new_entries: List[dict]):
 
 def overlay_context_base():
     """Overlay the files in context_base onto context."""
-    base_dir = Path("/mnt/data/xgl/mycode/action_agent_vllm/context_base")
-    target_dir = Path("/mnt/data/xgl/mycode/action_agent_vllm/context")
+    base_dir = Path("/mnt/data/anonymous/mycode/action_agent_vllm/context_base")
+    target_dir = Path("/mnt/data/anonymous/mycode/action_agent_vllm/context")
 
     if not base_dir.is_dir():
         print(f"The source folder does not exist: {base_dir}")

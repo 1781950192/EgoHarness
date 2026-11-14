@@ -450,9 +450,9 @@ def process_all_sequentially_realtime_gtea(
 
 def main():
     parser = argparse.ArgumentParser(description="GTEA real-time verification experiment - compute the real-time factor")
-    parser.add_argument('--labels_dir', type=str, default='/mnt/data/xgl/mydata/EGTEA++/EGTEA/GTEA_Labels_71/labels')
-    parser.add_argument('--videos_base_path', type=str, default='/mnt/data/xgl/mydata/EGTEA++/EGTEA/Videos')
-    parser.add_argument('--hos_path', type=str, default='/mnt/data/xgl/mydata/EGTEA++/gtea_image')
+    parser.add_argument('--labels_dir', type=str, default='/mnt/data/anonymous/mydata/EGTEA++/EGTEA/GTEA_Labels_71/labels')
+    parser.add_argument('--videos_base_path', type=str, default='/mnt/data/anonymous/mydata/EGTEA++/EGTEA/Videos')
+    parser.add_argument('--hos_path', type=str, default='/mnt/data/anonymous/mydata/EGTEA++/gtea_image')
     parser.add_argument('--max_videos', type=int, default=100, help="Number of videos to process (default: 100)")
     parser.add_argument('--max_strategies', type=int, default=50)
     parser.add_argument('--merge_threshold', type=int, default=200)

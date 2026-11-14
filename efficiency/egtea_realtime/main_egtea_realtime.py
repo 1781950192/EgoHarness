@@ -391,9 +391,9 @@ def process_all_sequentially_realtime_egtea(
 
 def main():
     parser = argparse.ArgumentParser(description="EGTEA real-time verification experiment - compute the real-time factor")
-    parser.add_argument('--label_file', type=str, default='/mnt/data/xgl/mydata/EGTEA++/EGTEA/Action_Annotations/test_split1.txt')
-    parser.add_argument('--video_base_dir', type=str, default='/mnt/data/xgl/mydata/EGTEA++/EGTEA/Trimmed_Action_Clips/trimmed_actions/cropped_clips')
-    parser.add_argument('--hos_path', type=str, default='/mnt/data/xgl/mydata/EGTEA++/egtea_image')
+    parser.add_argument('--label_file', type=str, default='/mnt/data/anonymous/mydata/EGTEA++/EGTEA/Action_Annotations/test_split1.txt')
+    parser.add_argument('--video_base_dir', type=str, default='/mnt/data/anonymous/mydata/EGTEA++/EGTEA/Trimmed_Action_Clips/trimmed_actions/cropped_clips')
+    parser.add_argument('--hos_path', type=str, default='/mnt/data/anonymous/mydata/EGTEA++/egtea_image')
     parser.add_argument('--max_videos', type=int, default=100, help="Number of videos to process (default: 100)")
     parser.add_argument('--max_strategies', type=int, default=50)
     parser.add_argument('--merge_threshold', type=int, default=200)

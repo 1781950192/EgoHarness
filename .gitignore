@@ -2,3 +2,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
+# double-blind review materials
+EgoDirector__CVPR.pdf
+EgoHarness_Additional_Experiments_Plan.docx

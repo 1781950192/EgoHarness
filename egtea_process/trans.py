@@ -227,9 +227,9 @@ def evaluate_egtea(result_file, label_file, noun_map_file, top_k=5):
 # ==================== Main function ====================
 def main():
     # Please change this according to your actual path
-    result_file = '/mnt/data/xgl/mycode/action_agent_vllm/egtea_results_32frames.txt'
-    label_file = '/mnt/data/xgl/mydata/EGTEA++/EGTEA/Action_Annotations/test_split1.txt'
-    noun_map_file = '/mnt/data/xgl/mydata/EGTEA++/EGTEA/Action_Annotations/noun_idx.txt'
+    result_file = '/mnt/data/anonymous/mycode/action_agent_vllm/egtea_results_32frames.txt'
+    label_file = '/mnt/data/anonymous/mydata/EGTEA++/EGTEA/Action_Annotations/test_split1.txt'
+    noun_map_file = '/mnt/data/anonymous/mydata/EGTEA++/EGTEA/Action_Annotations/noun_idx.txt'
 
     evaluate_egtea(
         result_file=result_file,

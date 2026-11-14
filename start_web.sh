@@ -1,14 +1,14 @@
 #!/bin/bash
 # Web service daemon script
 
-LOG_FILE="/mnt/data/xgl/mycode/action_agent_vllm/web_run.log"
+LOG_FILE="/mnt/data/anonymous/mycode/action_agent_vllm/web_run.log"
 
 echo "======================================"
 echo "Web service daemon"
 echo "======================================"
 echo ""
 
-cd /mnt/data/xgl/mycode/action_agent_vllm
+cd /mnt/data/anonymous/mycode/action_agent_vllm
 
 # Check for and kill the old process
 pkill -9 -f "python.*web_app.py" 2>/dev/null

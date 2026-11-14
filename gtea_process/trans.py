@@ -157,8 +157,8 @@ def evaluate_with_multiple_predictions(result_file, ground_truth, top_k=5):
 
 def main():
     # Configure the paths (change them according to your setup)
-    labels_dir = '/mnt/data/xgl/mydata/EGTEA++/EGTEA/GTEA_Labels_71/labels'
-    result_file = '/mnt/data/xgl/mycode/action_agent_vllm/gtea_val_results_32.txt'
+    labels_dir = '/mnt/data/anonymous/mydata/EGTEA++/EGTEA/GTEA_Labels_71/labels'
+    result_file = '/mnt/data/anonymous/mycode/action_agent_vllm/gtea_val_results_32.txt'
 
     ground_truth = parse_gtea_labels_for_evaluation(labels_dir)
 

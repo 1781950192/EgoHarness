@@ -29,8 +29,8 @@ def process_all_sequentially_ek100(
 ):
     adapter = EK100Adapter(
         csv_file_path=csv_file_path,
-        base_path_root='/mnt/data/xgl/mydata/ek100',
-        hos_path_root='/mnt/data/xgl/mydata/ek100_hos/32frames',
+        base_path_root='/mnt/data/anonymous/mydata/ek100',
+        hos_path_root='/mnt/data/anonymous/mydata/ek100_hos/32frames',
     )
     data_list = adapter.load_data()
     if not data_list:
@@ -88,7 +88,7 @@ def main():
     parser.add_argument('--num_frames', type=int, default=32)
     args = parser.parse_args()
 
-    csv_file_path = '/mnt/data/xgl/mydata/ek100/EPIC_100_validation.csv'
+    csv_file_path = '/mnt/data/anonymous/mydata/ek100/EPIC_100_validation.csv'
     output_txt_path = 'ek100_val_8B_32frames.txt'
 
     process_all_sequentially_ek100(
